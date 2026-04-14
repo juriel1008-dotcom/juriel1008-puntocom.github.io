@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("champiñon").style.display="none";
+document.getElementById("portobello").style.display="none";
+document.getElementById("shiitake").style.display="none";
+document.getElementById("reishi").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#tipos">Series de hongos</a>
+<a href="#derivados">Derivados</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<body>
+
+ <style>
+    .carousel {
+      position: relative;
+      width: 400px;   /* Ajusta el tamaño */
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .controls button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <img src="img/advCM.jpeg" alt="Imagen 1" class="active">
+  <img src="img/REVCM.jpeg" alt="Imagen 2">
+</div>
+
+<div class="controls">
+  <button onclick="prev()">Anterior</button>
+  <button onclick="next()">Siguiente</button>
+</div>
+
+<script>
+  let index = 0;
+  const images = document.querySelectorAll('.carousel img');
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+</script>
+
+</body>
+ 
+  <title>Informe de Cultivo CAM C Morada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe de Cultivo CAM C Morada</h1>
+    <p>
+        La muestra <strong>CAM C Morada</strong> fue cultivada en agar papa dextrosa (PDA), presentando un crecimiento con diámetros de 
+        <em>13.18 mm, 30.52 mm, 52.8 mm, 71.52 mm y 91.52 mm</em>, con una tasa de crecimiento de 
+        <em>0.44 ± 0.06 mm/h</em>.
+    </p>
+    <p>
+        La colonia presentó una forma circular con margen filamentoso, con elevación convexa y textura aterciopelada. 
+        La superficie fue de color blanco, mientras que el reverso presentó color morado con bordes blancos.
+    </p>
+    <p>
+        Se observaron exudados amarillentos transparentes en forma de gotas, sin evidencia de pigmentos difusibles. 
+        No se registraron características particulares de olor.
+    </p>
+</body>
+</html>

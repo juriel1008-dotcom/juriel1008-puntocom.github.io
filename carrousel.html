@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+ <title>Sefario UTEG</title>
+  <style>
+    .carousel {
+      position: relative;
+      width: 400px;   /* Ajusta el tamaño */
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .controls button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <img src="img/az1.jpeg" alt="Imagen 1" class="active">
+  <img src="img/az2.jpeg" alt="Imagen 2">
+</div>
+
+<div class="controls">
+  <button onclick="prev()">Anterior</button>
+  <button onclick="next()">Siguiente</button>
+</div>
+
+<script>
+  let index = 0;
+  const images = document.querySelectorAll('.carousel img');
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+</script>
+
+</body>
+</html>

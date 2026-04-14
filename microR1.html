@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("champiñon").style.display="none";
+document.getElementById("portobello").style.display="none";
+document.getElementById("shiitake").style.display="none";
+document.getElementById("reishi").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#tipos">Series de hongos</a>
+<a href="#derivados">Derivados</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<body>
+
+ <style>
+    .carousel {
+      position: relative;
+      width: 400px;   /* Ajusta el tamaño */
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .controls button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <img src="img/az1.jpeg" alt="Imagen 1" class="active">
+  <img src="img/esporac1.jfif" alt="Imagen 2">
+</div>
+
+<div class="controls">
+  <button onclick="prev()">Anterior</button>
+  <button onclick="next()">Siguiente</button>
+</div>
+
+<script>
+  let index = 0;
+  const images = document.querySelectorAll('.carousel img');
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+</script>
+
+</body>
+</html>
+ <title>Hongo observado</title>
+  <style>
+    .informe {
+      max-width: 800px;
+      margin: auto;
+      text-align: justify;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .informe h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="informe">
+  <h2>Muestra CAM 1</h2>
+  <p>
+    El hongo observado corresponde a un hongo filamentoso aislado del cepario del Laboratorio de Microbiología del Centro Universitario UTEG y cultivado en agar papa dextrosa (PDA). La muestra fue preparada mediante la técnica de impronta con cinta adhesiva y montada en azul de lactofenol, observándose a aumentos de 40X y 100X.
+  </p>
+  <p>
+    Microscópicamente se identificaron hifas septadas de morfología filamentosa, con un diámetro promedio de <strong>5.70 ± 1.02 µm</strong> y un ángulo de ramificación aproximado de <strong>49.48 ± 9.30°</strong>, presentando ramificaciones de <strong>140.13 ± 24.38 µm</strong> de longitud. Se observaron conidios de forma circular o globosa con un diámetro aproximado de <strong>4.20 ± 0.67 µm</strong> y pared celular lisa, con un espesor de <strong>0.73 ± 0.13 µm</strong>.
+  </p>
+  <p>
+    Los conidióforos mostraron una longitud promedio de <strong>104.42 ± 17.53 µm</strong> y un diámetro basal de <strong>4.46 ± 0.86 µm</strong>, con superficie lisa. No se observaron estructuras características de zigomicetos, ascomicetos ni basidiomicetos como esporangios, ascos o basidios.
+  </p>
+  <p>
+    Durante la tinción con azul de lactofenol las estructuras presentaron coloración azul, lo cual facilitó la visualización de las estructuras microscópicas. Además, se reportó la presencia de hifas septadas con aproximadamente cinco septos por campo de observación, sin evidenciarse otras estructuras especializadas como esclerocios, rizomorfos o estromas.
+  </p>
+  <p>
+    En conjunto, las características observadas indican un hongo filamentoso con reproducción asexual mediante conidios, con estructuras lisas y bien definidas al microscopio.
+  </p>
+</div>
+ 
+  </div>

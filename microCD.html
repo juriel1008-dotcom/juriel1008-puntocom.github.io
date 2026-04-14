@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("champiñon").style.display="none";
+document.getElementById("portobello").style.display="none";
+document.getElementById("shiitake").style.display="none";
+document.getElementById("reishi").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#tipos">Series de hongos</a>
+<a href="#derivados">Derivados</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<body>
+
+ <style>
+    .carousel {
+      position: relative;
+      width: 400px;   /* Ajusta el tamaño */
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .controls button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <img src="img/hinfasCD.jpeg" alt="Imagen 1" class="active">
+  <img src="img/hinfasCD2.jpeg" alt="Imagen 2">
+</div>
+
+<div class="controls">
+  <button onclick="prev()">Anterior</button>
+  <button onclick="next()">Siguiente</button>
+</div>
+
+<script>
+  let index = 0;
+  const images = document.querySelectorAll('.carousel img');
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+</script>
+
+</body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe Microscópico CAM D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe Microscópico CAM D</h1>
+    <p>
+        Respecto a las características microscópicas, la cepa fue aislada del cepario del 
+        <strong>Laboratorio de Microbiología del Centro Universitario UTEG</strong>, con origen desconocido. 
+        La preparación se realizó mediante técnica de impronta con cinta adhesiva (<em>Diurex</em>), utilizando 
+        azul de lactofenol como colorante, y se observó a aumentos de <em>40X</em> y <em>100X</em>.
+    </p>
+    <p>
+        Los conidios o esporas presentaron una longitud promedio de <em>3.48 ± 0.37 µm</em> y un diámetro de 
+        <em>1.22 ± 0.44 µm</em>. El ángulo de ramificación fue de aproximadamente <em>49.42 ± 10.73°</em>, con una 
+        longitud de ramificación de <em>30.77 ± 5.1 µm</em>.
+    </p>
+    <p>
+        En cuanto a los conidióforos, se observó un espesor de <em>0.87 ± 0.15 µm</em>, longitud de 
+        <em>19.12 ± 43.74 µm</em> y un diámetro basal de <em>6.55 ± 0.49 µm</em>; no se reportó diámetro apical. 
+        No se observaron estructuras correspondientes a zigomicetos (esporangios o esporangióforos), ascomicetos 
+        (ascos o ascosporas) ni basidiomicetos (basidios o basidiosporas).
+    </p>
+    <p>
+        Como observaciones adicionales, las hifas presentaron forma filamentosa con aproximadamente 
+        <em>11 septos por campo observado</em>. No se detectó ornamentación evidente en las estructuras ni la presencia 
+        de estructuras reproductivas accesorias como picnidios, cleistotecios o peritecios.
+    </p>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("champiñon").style.display="none";
+document.getElementById("portobello").style.display="none";
+document.getElementById("shiitake").style.display="none";
+document.getElementById("reishi").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+<p></p>
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#tipos">Series de hongos</a>
+<a href="#derivados">Derivados</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Mediciones</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 6px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Tabla de Mediciones</h2>
+
+<table>
+    <tr>
+        <th>Número</th>
+        <th>Longitud de ramificación (µm)</th>
+        <th>Ángulo (°)</th>
+        <th>Diámetro Hifa (µm)</th>
+        <th>Diámetro Espora (µm)</th>
+        <th>Espesor pared (µm)</th>
+        <th>Longitud conidioforo</th>
+        <th>Diámetro conidioforo (µm)</th>
+        <th>Esporangio diámetro (µm)</th>
+        <th>Área (µm)</th>
+        <th>Perímetro (µm)</th>
+    </tr>
+
+    <tr><td>1</td><td>204.42</td><td>49.65</td><td>8.56</td><td>2.26</td><td>0.58</td><td>165.67</td><td>16.68</td><td>65.81</td><td>3401.53</td><td>206.75</td></tr>
+    <tr><td>2</td><td>163.74</td><td>38.76</td><td>7.58</td><td>3.21</td><td>0.59</td><td>167.77</td><td>16.54</td><td>64.85</td><td>3303.02</td><td>203.73</td></tr>
+    <tr><td>3</td><td>243.46</td><td>55.14</td><td>8.40</td><td>2.55</td><td>0.42</td><td>184.42</td><td>15.09</td><td>66.97</td><td>3522.50</td><td>210.39</td></tr>
+    <tr><td>4</td><td>234.56</td><td>32.53</td><td>5.94</td><td>2.94</td><td>0.59</td><td>172.89</td><td>14.21</td><td>65.95</td><td>3416.02</td><td>207.19</td></tr>
+    <tr><td>5</td><td>175.89</td><td>45.43</td><td>6.29</td><td>2.14</td><td>0.42</td><td>175.77</td><td>17.41</td><td>64.85</td><td>3303.02</td><td>203.73</td></tr>
+    <tr><td>6</td><td>234.58</td><td>51.90</td><td>8.56</td><td>3.21</td><td>0.63</td><td>176.62</td><td>17.59</td><td>64.56</td><td>3273.54</td><td>202.82</td></tr>
+    <tr><td>7</td><td>220.31</td><td>40.24</td><td>7.27</td><td>2.39</td><td>0.59</td><td>163.58</td><td>14.41</td><td>65.64</td><td>3383.98</td><td>206.21</td></tr>
+    <tr><td>8</td><td>243.10</td><td>45.90</td><td>10.36</td><td>3.41</td><td>0.62</td><td>193.38</td><td>17.33</td><td>64.31</td><td>3248.24</td><td>202.04</td></tr>
+    <tr><td>9</td><td>236.90</td><td>33.05</td><td>7.27</td><td>2.98</td><td>0.34</td><td>175.64</td><td>19.00</td><td>64.48</td><td>3265.43</td><td>202.57</td></tr>
+    <tr><td>10</td><td>229.40</td><td>35.40</td><td>9.32</td><td>2.82</td><td>0.59</td><td>173.64</td><td>18.82</td><td>67.13</td><td>3539.36</td><td>210.90</td></tr>
+    <tr><td>11</td><td>236.91</td><td>47.61</td><td>8.73</td><td>2.52</td><td>0.42</td><td>167.48</td><td>14.21</td><td>67.11</td><td>3537.25</td><td>210.83</td></tr>
+    <tr><td>12</td><td>234.65</td><td>39.45</td><td>11.63</td><td>2.55</td><td>0.61</td><td>170.43</td><td>14.45</td><td>67.01</td><td>3526.71</td><td>210.52</td></tr>
+    <tr><td>13</td><td>238.56</td><td>48.40</td><td>6.17</td><td>3.41</td><td>0.42</td><td>174.73</td><td>13.23</td><td>68.23</td><td>3656.30</td><td>214.35</td></tr>
+    <tr><td>14</td><td>230.45</td><td>45.68</td><td>8.48</td><td>3.12</td><td>0.59</td><td>178.30</td><td>14.60</td><td>67.75</td><td>3605.04</td><td>212.84</td></tr>
+    <tr><td>15</td><td>189.56</td><td>33.65</td><td>6.89</td><td>3.12</td><td>0.43</td><td>165.78</td><td>16.96</td><td>67.81</td><td>3611.42</td><td>213.03</td></tr>
+
+    <tr><th>Media</th><td>221.10</td><td>42.85</td><td>8.10</td><td>2.84</td><td>0.52</td><td>173.74</td><td>16.04</td><td>66.16</td><td>3439.56</td><td>207.86</td></tr>
+    <tr><th>Mediana</th><td>234.56</td><td>45.43</td><td>8.40</td><td>2.94</td><td>0.59</td><td>173.64</td><td>16.54</td><td>65.95</td><td>3416.02</td><td>207.19</td></tr>
+    <tr><th>Desv. Est.</th><td>25.49</td><td>7.24</td><td>1.58</td><td>0.41</td><td>0.10</td><td>7.82</td><td>1.83</td><td>1.35</td><td>140.09</td><td>4.23</td></tr>
+    <tr><th>CV %</th><td>11.53</td><td>16.90</td><td>19.50</td><td>14.60</td><td>19.04</td><td>4.50</td><td>11.39</td><td>2.04</td><td>4.07</td><td>2.04</td></tr>
+
+</table>
+
+</body>
+</html>

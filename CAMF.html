@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("champiñon").style.display="none";
+document.getElementById("portobello").style.display="none";
+document.getElementById("shiitake").style.display="none";
+document.getElementById("reishi").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+<p></p>
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#tipos">Series de hongos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+
+<div style="text-align:center;">
+  <div class="card" style="width: 18rem; display:inline-block;">
+    <div class="card-body">
+      <h5 class="card-title">Macroscopico</h5>
+      
+      <a href="macroCF.html" class="card-link">Más información</a>
+    </div>
+  </div>
+</div>
+
+   
+ <div style="text-align:center;">
+  <div class="card" style="width: 18rem; display:inline-block;">
+    <div class="card-body">
+      <h5 class="card-title">Microscopico</h5>
+      
+      <a href="microCF.html" class="card-link">Más información</a>
+    </div>
+  </div>
+</div>
+ <div style="text-align:center;">
+  <div class="card" style="width: 18rem; display:inline-block;">
+    <div class="card-body">
+      <h5 class="card-title">Morfometrica</h5>
+      
+      <a href="morfoCF.html" class="card-link">Más información</a>
+    </div>
+  </div>
+</div>
+
+ <div style="text-align:center;">
+  <div class="card" style="width: 18rem; display:inline-block;">
+    <div class="card-body">
+      <h5 class="card-title">Conservacion</h5>
+      
+      <a href="conservaCF.html" class="card-link">Más información</a>
+    </div>
+  </div>
+</div>

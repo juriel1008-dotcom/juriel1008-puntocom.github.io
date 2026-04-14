@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("champiñon").style.display="none";
+document.getElementById("portobello").style.display="none";
+document.getElementById("shiitake").style.display="none";
+document.getElementById("reishi").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#tipos">Series de hongos</a>
+<a href="#derivados">Derivados</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<body>
+
+ <style>
+    .carousel {
+      position: relative;
+      width: 400px;   /* Ajusta el tamaño */
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .controls button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <img src="img/adverso (1)-convertido-a-pequeño (1).jpeg" alt="Imagen 1" class="active">
+  <img src="img/reverso-convertido-a-pequeño.jpeg" alt="Imagen 2">
+</div>
+
+<div class="controls">
+  <button onclick="prev()">Anterior</button>
+  <button onclick="next()">Siguiente</button>
+</div>
+
+<script>
+  let index = 0;
+  const images = document.querySelectorAll('.carousel img');
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+</script>
+
+</body>
+<h2>Muestra CAM 1</h2>
+</html>
+  <ul><li>Diámetro:N/A</li>
+    <li>Forma de la colonIa:Irregular</li>
+    <li>margen de la colonia: filamentos</li>
+    <li>Textura: polvorines</li>
+    <li>Color de la superficie: verde</li>
+    <li>Color del reverso:amarillento</li>
+    <li>Zonación: reverso corrugado</li>
+    <li>Exudados: no se observo</li>
+    <li>Producción de pigmentos:N/A</li>
+    <li>olor:N/A</li>
+
+</ul>
+  </div>
+
+  
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("champiñon").style.display="none";
+document.getElementById("portobello").style.display="none";
+document.getElementById("shiitake").style.display="none";
+document.getElementById("reishi").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#tipos">Series de hongos</a>
+<a href="#derivados">Derivados</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<body>
+
+ <style>
+    .carousel {
+      position: relative;
+      width: 400px;   /* Ajusta el tamaño */
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .controls button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <img src="img/MicroF.jpeg" alt="Imagen 1" class="active">
+  <img src="img/ESPCF.jpeg" alt="Imagen 2">
+</div>
+
+<div class="controls">
+  <button onclick="prev()">Anterior</button>
+  <button onclick="next()">Siguiente</button>
+</div>
+
+<script>
+  let index = 0;
+  const images = document.querySelectorAll('.carousel img');
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+</script>
+
+</body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe Microscópico CAM F</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe Microscópico CAM F</h1>
+    <p>
+        Respecto a las características microscópicas, la cepa fue aislada del cepario del 
+        <strong>Laboratorio de Microbiología del Centro Universitario UTEG</strong>, con origen desconocido. 
+        La preparación de la muestra se realizó mediante técnica de impronta con cinta adhesiva (<em>Diurex</em>) 
+        y montaje en azul de lactofenol, observándose a aumentos de <em>40X</em> y <em>100X</em>.
+    </p>
+    <p>
+        Las hifas presentaron una morfología filamentosa, con presencia de septos, registrándose aproximadamente 
+        <em>11 septos por campo observado</em>. No se detectó ornamentación en las estructuras. 
+        El diámetro de las hifas fue de <em>2.65 ± 0.52 µm</em>, con ramificaciones que formaban un ángulo de aproximadamente 
+        <em>45.58 ± 8.72°</em> y una longitud de ramificación de <em>33.40 ± 3.61 µm</em>.
+    </p>
+    <p>
+        Los conidios o esporas presentaron una longitud de <em>5.58 ± 0.75 µm</em> y un ancho de <em>2.82 ± 0.50 µm</em>, 
+        con una relación de aspecto ovalada; no se registró diámetro globoso. 
+        En cuanto a los conidióforos, se observaron con superficie lisa, una longitud aproximada de 
+        <em>28.18 ± 14.69 µm</em> y un diámetro basal de <em>3.80 ± 0.70 µm</em>; no se reportó diámetro apical.
+    </p>
+    <p>
+        No se observaron estructuras correspondientes a zigomicetos (esporangios o esporangióforos) ni a ascomicetos 
+        (ascos o ascosporas). Sin embargo, se reportaron estructuras compatibles con basidiomicetos, donde los basidios 
+        presentaron una longitud de <em>13.94 ± 0.84 µm</em> y un ancho de <em>4.89 ± 0.95 µm</em>.
+    </p>
+    <p>
+        Como observaciones adicionales, se indicó la presencia de estructuras reproductivas accesorias, aunque no se especificó 
+        el tipo exacto, y no se identificaron picnidios, cleistotecios ni peritecios.
+    </p>
+</body>
+</html>

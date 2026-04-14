@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("champiñon").style.display="none";
+document.getElementById("portobello").style.display="none";
+document.getElementById("shiitake").style.display="none";
+document.getElementById("reishi").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+<p></p>
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#tipos">Series de hongos</a>
+<a href="#derivados">Derivados</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+ <title>Tabla de Mediciones</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #000; padding: 8px; text-align: center; }
+  th { background-color: #f2f2f2; }
+</style>
+</head>
+<body>
+
+<h2>Mediciones microscópicas</h2>
+
+<table>
+  <tr>
+    <th>N°</th>
+    <th>Longitud de ramificación (µm)</th>
+    <th>Ángulo (°)</th>
+    <th>Diámetro hifa (µm)</th>
+    <th>Longitud espora (µm)</th>
+    <th>Ancho espora (µm)</th>
+    <th>Espesor pared (µm)</th>
+  </tr>
+
+  <tr><td>1</td><td>24.21</td><td>51.81</td><td>2.17</td><td>4.43</td><td>0.79</td><td>0.02</td></tr>
+  <tr><td>2</td><td>19.54</td><td>79.56</td><td>1.86</td><td>5.18</td><td>0.58</td><td>0.02</td></tr>
+  <tr><td>3</td><td>15.34</td><td>92.69</td><td>2.12</td><td>5.25</td><td>1.19</td><td>0.03</td></tr>
+  <tr><td>4</td><td>24.01</td><td>52.54</td><td>1.72</td><td>3.95</td><td>0.89</td><td>0.03</td></tr>
+  <tr><td>5</td><td>19.16</td><td>76.33</td><td>1.86</td><td>3.77</td><td>1.22</td><td>0.03</td></tr>
+  <tr><td>6</td><td>16.39</td><td>68.69</td><td>1.32</td><td>4.16</td><td>0.82</td><td>0.03</td></tr>
+  <tr><td>7</td><td>15.64</td><td>54.39</td><td>1.80</td><td>3.95</td><td>0.83</td><td>0.03</td></tr>
+  <tr><td>8</td><td>20.31</td><td>65.35</td><td>1.16</td><td>4.49</td><td>1.16</td><td>0.02</td></tr>
+  <tr><td>9</td><td>25.47</td><td>57.56</td><td>2.13</td><td>5.72</td><td>0.95</td><td>0.03</td></tr>
+  <tr><td>10</td><td>22.15</td><td>73.30</td><td>1.43</td><td>3.55</td><td>0.85</td><td>0.03</td></tr>
+  <tr><td>11</td><td>17.72</td><td>59.04</td><td>1.55</td><td>4.56</td><td>0.85</td><td>0.02</td></tr>
+  <tr><td>12</td><td>13.45</td><td>52.49</td><td>2.14</td><td>3.76</td><td>0.94</td><td>0.03</td></tr>
+  <tr><td>13</td><td>20.15</td><td>71.15</td><td>1.60</td><td>3.00</td><td>1.14</td><td>0.02</td></tr>
+  <tr><td>14</td><td>25.19</td><td>52.85</td><td>2.00</td><td>3.32</td><td>1.00</td><td>0.03</td></tr>
+  <tr><td>15</td><td>24.34</td><td>55.73</td><td>1.43</td><td>4.50</td><td>0.85</td><td>0.02</td></tr>
+
+  <tr><th>Media</th><td>20.20</td><td>64.23</td><td>1.75</td><td>4.24</td><td>0.94</td><td>0.026</td></tr>
+  <tr><th>Mediana</th><td>20.15</td><td>59.04</td><td>1.80</td><td>4.16</td><td>0.89</td><td>0.03</td></tr>
+  <tr><th>Desv. estándar</th><td>3.93</td><td>12.37</td><td>0.33</td><td>0.75</td><td>0.18</td><td>0.005</td></tr>
+  <tr><th>CV %</th><td>19.46</td><td>19.25</td><td>18.68</td><td>17.66</td><td>18.88</td><td>19.50</td></tr>
+
+</table>
+
+</body>
+</html>

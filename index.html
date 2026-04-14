@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sefario UTEG</title>
+
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:30px;
+}
+
+.contenedor-hongos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hongo{
+background:white;
+border-radius:10px;
+padding:20px;
+cursor:pointer;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+width:200px;
+text-align:center;
+transition:0.3s;
+}
+
+.hongo:hover{
+transform:scale(1.05);
+background:#e8f5e9;
+}
+
+.info{
+margin-top:20px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:none;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+
+document.getElementById("CAM").style.display="none";
+document.getElementById("serie").style.display="none";
+document.getElementById("seriex").style.display="none";
+document.getElementById("seriexx").style.display="none";
+
+document.getElementById(tipo).style.display="block";
+
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sefario UTEG</h1>
+
+</header>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#tipos">Series de Hongos</a>
+<a href="#contacto"></a>
+</nav>
+
+<section id="inicio">
+<h2>¿Qué son los hongos?</h2>
+<p>
+los hongos se definen como organismos eucariotas, quimioheterótrofos y osmótrofos, caracterizados por una estructura celular y un metabolismo secundario únicos que los distinguen de plantas y animales.
+</p>
+
+<h2>¿Donde se encuentran?</h2>
+<p>
+Los hongos son organismos ubicuos, lo que significa que están prácticamente en todas partes, prosperando en ambientes que ofrecen humedad, nutrientes orgánicos y, a menudo, poca luz. Se encuentran tanto en el exterior (naturaleza) como en el interior (hogar), desempeñando un papel clave en la descomposición de materia orgánica.
+</p>
+</section>
+
+<section id="tipos">
+
+<h2>Series de Hongos</h2>
+<p> </p>
+
+<div class="contenedor-hongos">
+
+<div class="hongo" onclick="mostrarInfo('CAM')">
+🍄 Serie CAM
+</div>
+
+<div class="hongo" onclick="mostrarInfo('serie')">
+🍄 
+</div>
+
+<div class="hongo" onclick="mostrarInfo('seriex')">
+🍄 
+</div>
+
+<div class="hongo" onclick="mostrarInfo('seriexx')">
+🍄 
+</div>
+
+</div>
+
+<div id="CAM" class="info">
+  <a href="R1.html" style="display:block;">C1</a>
+  <a href="R2.html" style="display:block;">C3</a>
+  <a href="CAM6.html" style="display:block;">C6</a>
+  <a href="CAM17.html" style="display:block;">C17</a>
+  <a href="CAMA.html" style="display:block;">CA</a>
+  <a href="CAMC.html" style="display:block;">CC</a>
+  <a href="CAMCM.html" style="display:block;">CCM</a>
+  <a href="CAMD.html" style="display:block;">CD</a>
+  <a href="CAME.html" style="display:block;">CE</a>
+  <a href="CAMF.html" style="display:block;">CF</a>
+  <a href="CAMH.html" style="display:block;">CH</a>
+  
+</div>
+
+<div id="serie" class="info">
+<h3>Serie</h3>
+<p>Agregar aquí información importante del hongo.</p>
+</div>
+
+<div id="seriex" class="info">
+<h3>Serie x</h3>
+<p>Agregar aquí información importante del hongo.</p>
+</div>
+
+<div id="seriexx" class="info">
+<h3>Serie xx</h3>
+<p>Agregar aquí información importante del hongo.</p>
+</div>
+
+</section>
+
+<section id="derivados">
+<h2>Derivados de los Hongos</h2>
+
+<ul>
+<li>Medicamentos</li>
+<li>Antibióticos</li>
+<li>Alimentos</li>
+<li>Suplementos alimenticios</li>
+<li>Biotecnología</li>
+</ul>
+
+<p></p>
+
+</section>
+
+<section id="contacto">
+<h2></h2>
+<p></p>
+</section>
+
+<footer>
+<p>Página educativa sobre hongos</p>
+</footer>
+
+</body>
+</html>
