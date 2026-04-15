@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cepario UTEG</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:#5567bb;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#4f6a92;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:30px;
+}
+
+/* CONTENEDOR DEL TABLERO */
+.tablero-container{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+/* TABLERO */
+.tablero{
+    display:grid;
+    grid-template-columns: 60px repeat(5, 80px);
+    grid-template-rows: 40px repeat(4, 80px);
+    gap:2px;
+}
+
+.celda{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid black;
+    background:white;
+    cursor:pointer;
+    position:relative;
+}
+
+.header{
+    background:#ddd;
+    font-weight:bold;
+}
+
+.ficha{
+    width:30px;
+    height:30px;
+    background:#00c853;
+    border-radius:50%;
+    position:absolute;
+}
+
+footer{
+    background:#080d50;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+
+<script>
+function mostrarInfo(tipo){
+    document.getElementById("CAM").style.display="none";
+    document.getElementById("serie").style.display="none";
+    document.getElementById("seriex").style.display="none";
+    document.getElementById("seriexx").style.display="none";
+
+    document.getElementById(tipo).style.display="block";
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Cepario UTEG <img src="img/logouteg.png" width="32"></h1>
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="index.html">Series de Hongos</a>
+</nav>
+
+<section>
+
+<h2>Tablero de Coordenadas</h2>
+
+<div class="tablero-container">
+    <div class="tablero" id="tablero"></div>
+</div>
+
+</section>
+
+<footer>
+<p>© Cepario UTEG</p>
+</footer>
+
+<script>
+const columnas = ["", "A", "B", "C", "D", "E"];
+const filas = ["", "1", "2", "3", "4"];
+
+const tablero = document.getElementById("tablero");
+let posicionFicha = "A1";
+
+// Crear tablero
+for(let i=0;i<filas.length;i++){
+    for(let j=0;j<columnas.length;j++){
+
+        let celda = document.createElement("div");
+        celda.classList.add("celda");
+
+        if(i===0 || j===0){
+            celda.classList.add("header");
+            celda.textContent = columnas[j] || filas[i];
+        }else{
+            let coord = columnas[j] + filas[i];
+            celda.dataset.coord = coord;
+            celda.textContent = coord;
+
+            celda.addEventListener("click", () => moverFicha(coord));
+        }
+
+        tablero.appendChild(celda);
+    }
+}
+
+// Crear ficha
+const ficha = document.createElement("div");
+ficha.classList.add("ficha");
+
+function colocarFicha(coord){
+    const celda = document.querySelector(`[data-coord="${coord}"]`);
+    celda.appendChild(ficha);
+}
+
+function moverFicha(coord){
+    posicionFicha = coord;
+    colocarFicha(coord);
+}
+
+colocarFicha(posicionFicha);
+</script>
+
+</body>
+</html>
