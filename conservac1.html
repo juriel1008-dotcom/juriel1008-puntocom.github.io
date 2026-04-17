@@ -102,8 +102,21 @@ function mostrarInfo(tipo){
 </header>
 
 <nav>
-<a href="index.html">Inicio</a>
-<a href="index.html">Series de Hongos</a>
+    <a class="navbar-brand" href="index.html">
+      Inicio
+    </a>
+     <a class="navbar-brand" href="macroscopico.html">
+      Macroscópico
+    </a>
+    <a class="navbar-brand" href="microscopio.html">
+      Microscópico
+    </a>
+    <a class="navbar-brand" href="morfometrica.html">
+      Morfometrica
+    </a>
+    <a class="navbar-brand" href="conservacion.html">
+      Conservación
+    </a>
 </nav>
 
 <section>
@@ -120,12 +133,55 @@ function mostrarInfo(tipo){
 <p>© Cepario UTEG</p>
 </footer>
 
+<style>
+.tablero{
+    display:grid;
+    grid-template-columns: repeat(6, 60px);
+}
+
+.celda{
+    width:60px;
+    height:60px;
+    border:1px solid #333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.header{
+    background:#ccc;
+    font-weight:bold;
+}
+
+.ficha{
+    width:25px;
+    height:25px;
+    background:red;
+    border-radius:50%;
+    cursor:pointer;
+    position:relative;
+}
+
+/* Texto al pasar el cursor */
+.ficha:hover::after{
+    content:"CAM1";
+    position:absolute;
+    top:-20px;
+    left:-5px;
+    background:black;
+    color:white;
+    font-size:10px;
+    padding:2px 5px;
+    border-radius:5px;
+}
+</style>
+
 <script>
 const columnas = ["", "A", "B", "C", "D", "E"];
 const filas = ["", "1", "2", "3", "4"];
 
 const tablero = document.getElementById("tablero");
-let posicionFicha = "A1";
 
 // Crear tablero
 for(let i=0;i<filas.length;i++){
@@ -149,22 +205,39 @@ for(let i=0;i<filas.length;i++){
     }
 }
 
-// Crear ficha
-const ficha = document.createElement("div");
-ficha.classList.add("ficha");
+// ---- SISTEMA DE VARIAS FICHAS ----
+let fichas = [];
+let fichaActiva = null;
 
-function colocarFicha(coord){
+// Crear 3 fichas
+for(let i=0; i<3; i++){
+    let f = document.createElement("div");
+    f.classList.add("ficha");
+
+    // seleccionar ficha
+    f.addEventListener("click", (e)=>{
+        e.stopPropagation(); // evita conflicto con celda
+        fichaActiva = f;
+    });
+
+    fichas.push(f);
+}
+
+// Colocar fichas iniciales
+colocarFicha(fichas[0], "A1");
+colocarFicha(fichas[1], "B2");
+colocarFicha(fichas[2], "C3");
+
+// Función para colocar ficha
+function colocarFicha(ficha, coord){
     const celda = document.querySelector(`[data-coord="${coord}"]`);
     celda.appendChild(ficha);
 }
 
+// Mover SOLO la ficha seleccionada
 function moverFicha(coord){
-    posicionFicha = coord;
-    colocarFicha(coord);
+    if(fichaActiva){
+        colocarFicha(fichaActiva, coord);
+    }
 }
-
-colocarFicha(posicionFicha);
 </script>
-
-</body>
-</html>

@@ -92,18 +92,57 @@ document.getElementById(tipo).style.display="block";
 <body>
 
 <header>
-<h1>Cepario UTEG <img src="img/logouteg.png" alt="icono" width="32" height="32"></h1>
+<h1>Cepario UTEG <img src="img/logouteg.png" width="32"></h1>
 
 
 </header>
 
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#tipos">Series de Hongos</a>
-<a href="#contacto"></a>
-</nav>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      Inicio
+    </a>
+     <a class="navbar-brand" href="macroscopico.html">
+      Macroscópico
+    </a>
+    <a class="navbar-brand" href="microscopio.html">
+      Microscópico
+    </a><a class="navbar-brand" href="morfometrica.html">
+      Morfometrica
+    </a>
+    <a class="navbar-brand" href="conservacion.html">
+      Conservación
+    </a>
 
+  </div>
+
+</nav>
 <section id="inicio">
+  <title>Hongo observado</title>
+  <style>
+    .informe {
+      max-width: 800px;
+      margin: auto;
+      text-align: justify;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .informe h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="informe">
+  <h2>Bienvenidos a nuestra pagina</h2>
+
+  <p>
+    Este cepario digital es una herramienta diseñada para la organizacion y consulta de hongos no identificados , integrando informacion macroscopica, microscopica, morfometrica y de conservacion. 
+  </p>
+  <p>Su objetivo es facilitar el acceso a datos microbiologicos mediante una plataforma digital estructurada, contribuyendo al aprendizaje y analisis en el area de microbiologia.</p>
+
 <h2>Conoce Nuestro Laboratorio</h2>
 <html>
     <head>
@@ -115,7 +154,7 @@ document.getElementById(tipo).style.display="block";
 		<div id="carrusel-contenido">
 			<div id="carrusel-caja">
 				<div class="carrusel-elemento">
-					<img class="imagenes" src="img/imglab1.jpeg" >
+					<img class="imagenes" src="img/imglab1.jpeg" style="width: 300px; height: auto; display: block; margin: auto;" >
 				</div>
 				<div class="carrusel-elemento">   
 					<img class="imagenes" src="img/imglab2.jpeg">
@@ -132,30 +171,10 @@ document.getElementById(tipo).style.display="block";
 
 <section id="tipos">
 
-<h2>Series de Hongos</h2>
-<p> </p>
 
-<div class="contenedor-hongos">
-
-<div class="hongo" onclick="mostrarInfo('CAM')">
-🍄 Serie CAM
-</div>
-
-<div class="hongo" onclick="mostrarInfo('serie')">
-🍄 Serie R
-</div>
-
-<div class="hongo" onclick="mostrarInfo('seriex')">
-🍄 Serie Urias 1
-</div>
-
-<div class="hongo" onclick="mostrarInfo('seriexx')">
-🍄 Serie Urias 2
-</div>
-
-</div>
 
 <div id="CAM" class="info">
+  <h2>Cepas</h2>
   <a href="R1.html" style="display:block;">C1</a>
   <a href="R2.html" style="display:block;">C3</a>
   <a href="CAM6.html" style="display:block;">C6</a>
@@ -188,16 +207,6 @@ document.getElementById(tipo).style.display="block";
 </section>
 
 <section id="derivados">
-<h2>Derivados de los Hongos</h2>
-
-<ul>
-<li>Medicamentos</li>
-<li>Antibióticos</li>
-<li>Alimentos</li>
-<li>Suplementos alimenticios</li>
-<li>Biotecnología</li>
-</ul>
-
 <p></p>
 
 </section>
